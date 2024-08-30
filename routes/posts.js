@@ -4,8 +4,7 @@ const mongoose = require('mongoose');
 const movieSchema = new mongoose.Schema({
   moviename: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   filesize: {
     type: String,
