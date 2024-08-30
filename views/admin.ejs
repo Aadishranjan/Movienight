@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Brand</h1>
+        </div>
+        <ul>
+            <li data-target="dashboard">
+                <i class="ri-dashboard-fill"></i>
+                <span>Dashboard</span>
+            </li>
+            <li data-target="movie">
+                <i class="ri-movie-fill"></i>
+                <span>Movie</span>
+            </li>
+            <li data-target="upload-movie">
+                <i class="ri-upload-cloud-2-fill"></i>
+                <span>Upload Movie</span>
+            </li>
+            <li data-target="delete">
+                <i class="ri-delete-bin-2-fill"></i>
+                <span>Delete</span>
+            </li>
+            <li data-target="settings">
+                <i class="ri-settings-3-fill"></i>
+                <span>Settings</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="ri-search-line"></i></button>
+                </div>
+                <div class="user">
+                    <a href="/home" class="btn">Home</a>
+                    <a href="/profile" class="btn">Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="dashboard" class="content-item">
+                <h3>Welcome to Dashboard</h3>
+            </div>
+            <div id="movie" class="content-item">
+                <h3>Movie Section</h3>
+            </div>
+            <div id="upload-movie" class="content-item">
+                <h3>Upload Movie Section</h3>
+                
+<form action="/add" method="POST">
+  <div class="input-box">
+    <label for="moviename">Movie Name</label>
+    <input id="moviename" type="text" placeholder="Movie Name" name="moviename" required>
+  </div>
+  <div class="input-box">
+    <label for="language">Language</label>
+    <input id="language" type="text" placeholder="Language" name="language" required>
+  </div>
+  <div class="input-box">
+    <label for="description">Description</label>
+    <input type="text" id="description" placeholder="Description" name="description" required></input>
+  </div>
+  <div class="input-box">
+    <label for="movietype">Movie Type (Action, Horror, Love Story)</label>
+    <input id="movietype" type="text" placeholder="Movie Type" name="movietype" required>
+  </div>
+  <div class="input-box">
+    <label for="imageurl">Image URL</label>
+    <input id="imageurl" type="text" placeholder="Image URL" name="imageurl" required>
+  </div>
+  <div class="input-box">
+    <label for="filesize">File Size</label>
+    <input id="filesize" type="text" placeholder="File Size" name="filesize" required>
+  </div>
+  <div class="input-box">
+    <label for="downloadlink">Download Link</label>
+    <input id="downloadlink" type="url" placeholder="Download Link" name="downloadlink" required>
+  </div>
+  <div class="input-box">
+    <label for="filesize2">File Size 2</label>
+    <input id="filesize2" type="text" placeholder="File Size 2" name="filesize2" required>
+  </div>
+  <div class="input-box">
+    <label for="downloadlink2">Download Link 2</label>
+    <input id="downloadlink2" type="url" placeholder="Download Link 2" name="downloadlink2" required>
+  </div>
+  <div class="input-box">
+    <label for="date">Date</label>
+    <input type="text" placeholder="Date (e.g., 21 August 2024)" name="date" id="date" required>
+</div>
+
+  
+  <button type="submit">Submit</button>
+</form>
+
+  </div>
+            <div id="delete" class="content-item">
+                <h3>Delete Section</h3>
+            </div>
+            <div id="settings" class="content-item">
+                <h3>Settings Section</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

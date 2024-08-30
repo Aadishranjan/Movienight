@@ -1,0 +1,150 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+    /* Background image */
+
+body {
+  background-image: url("../images/download-6-scaled.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+    /* Glassmorphism effect */
+.card {
+  position: relative;
+  padding: 3rem 2rem 2rem 2rem;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(25px);
+  border: 2px solid #c6c3c3;
+  color: white;
+  margin: 0 8px;
+}
+    
+.login-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6c3c3;
+  width: 140px;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+}
+
+.login-header span {
+  font-size: 30px;
+  color: #000;
+}
+
+.login-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  background: transparent;
+  box-shadow: 15px 0 0 0 #c6c3c3;
+}
+
+.login-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 50%;
+  background: transparent;
+  box-shadow: -15px 0 0 0 #c6c3c3;
+}    
+form{
+  margin-top: 60px;
+}
+.form-group {
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 13px;
+  border-radius: 30px;
+  border: 2px solid #c6c3c3;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 36px;
+  right: 25px;
+  font-size: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background-color: #ececec;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+.text-center {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}

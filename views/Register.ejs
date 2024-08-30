@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+    <div class="login-header">
+      <span>Register</span>
+    </div>
+    <form action="/register" method="POST">
+      
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <i class="ri-user-line icon"></i>
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <i class="ri-user-line icon"></i>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <i class="ri-mail-line icon"></i>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <i class="ri-lock-line icon"></i>
+      </div>
+      
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p class="text-center">Already have an account? <a href="/" class="text-white">Login here</a>.</p>
+  </div>
+</div>
+
+</body>
+</html>

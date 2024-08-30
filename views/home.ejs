@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/home.css">
+  <title>AllMoviesHub</title>
+</head>
+<body>
+  <header>
+    <div class="logo">AllMoviesHub</div>
+    <nav>
+      <a href="#">Movies by Year</a>
+      <a href="#">Action</a>
+      <a href="#">Horror</a>
+      <a href="#">Comdey</a>
+      <a href="/profile">Profile</a>
+    </nav>
+  </header>
+  <hr>
+  <div class="search-bar">
+  <form action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search any movie/series...">
+    <button type="submit"><i class="ri-search-line"></i></button>
+  </form>
+  </div>
+
+  <main>
+    <div class="movie-grid">
+      <% movies.forEach(movie => { %>
+        <div class="movie-card">
+          <img src="<%= movie.imageurl %>" alt="<%= movie.moviename %>">
+          <h3><%= movie.moviename %></h3>
+          <p><%= movie.date %></p>
+          <a class="btn-a" href="/movie/<%= movie._id %>">View Details</a>
+        </div>
+      <% }) %>
+    </div>
+  </main>
+</body>
+</html>

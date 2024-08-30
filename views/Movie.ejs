@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.moviename %> - Details</title>
+    <style>
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.movie-details-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.movie-image img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-title {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: #f5c518;
+}
+
+.movie-date {
+    font-size: 1.2em;
+    color: #aaa;
+}
+
+.movie-description {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ddd;
+    margin: 50px 0;
+}
+
+.download-button {
+    margin: 30px 0;
+    background-color: #f5c518;
+    color: #111;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #d4a418;
+}
+    </style>
+</head>
+<body>
+    <div class="movie-details-container">
+        <div class="movie-image">
+            <img src="<%= movie.imageurl %>" alt="<%= movie.moviename %>">
+        </div>
+        <div class="movie-info">
+            <h1 class="movie-title"><%= movie.moviename %></h1>
+            <p class="movie-date">Release Date: <%= movie.date %></p>
+            <p class="language">Language: <%= movie.language %></p>
+            <p class="movie-description"><%= movie.description %></p>
+            <a href="<%= movie.downloadlink %>" class="download-button" target="_blank">Download Now[<%= movie.filesize %>]</a>
+            <a href="<%= movie.downloadlink2 %>" class="download-button" target="_blank">Download Now[<%= movie.filesize2 %>]</a>
+        </div>
+    </div>
+</body>
+</html>
